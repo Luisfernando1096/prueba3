@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: myfont;
+    src: 
+        url('../fonts/CustomCraft-Regular.otf') format('opentype'), 
+        url('../fonts/CustomCraft-Regular.ttf') format('truetype'), 
+        url('../fonts/CustomCraft-Regular.woff') format('woff');
+}
+
+.fondo{
+    background-color: rgba(80, 136, 201, 0.651);
+}
+
+.instagram, hr, footer{
+    display: none;
+}
+
+.contenedor{
+    background: rgb(59, 156, 221);
+    color: aliceblue;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 100px 10px 100px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen-html{
+    display: none;
+}
+
+.grupo{
+    width: 90%;
+    background-color: rgb(13, 13, 70);
+    color: aliceblue;
+    margin: 10px auto 40px auto;
+    text-align: center;
+}
+
+.barra{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.barra div{
+    background: rgb(9, 105, 168);
+    /* background-color: rgb(48, 42, 42); */
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    font-size: 25px;
+    text-align: center;
+}
+.barra div:hover{
+    cursor: pointer;
+    background-color: rgb(0, 60, 255);
+}
+
+.contenedor-articulos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.articulo{
+    display: block;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    border: 3px solid blue;
+    border-radius: 20px;
+}
+
+article img{
+    width: 100%;
+    height: auto;
+}
+
+.datos div hr{
+    width: 90%;
+}
+
+hr{
+    width: 100%;
+}
+h2{
+    color: blue;
+}
+h4{
+    color: rgb(48, 111, 170);
+}
+
+.datos{
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.busqueda{
+    background-color: blue;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    width: 30%;
+}
+button:hover{
+    cursor: pointer;
+}
+.busqueda form{
+    width: 100%;
+}
+.busqueda form input{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.busqueda li{
+    margin: 5px;
+    list-style: none;
+}
+.busqueda li a:hover{
+    background-color: rgba(148, 148, 189, 0.637);
+}
+.busqueda li a{
+    display: block;
+    color: aliceblue;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+h5{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: aliceblue;
+
+}
+
+.busqueda form input{
+    width: 100%;
+}
+
+.redes{
+    width: 100%;
+    background-color: blue;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+.redes div a{
+    margin-top: 30px;
+    color: aliceblue;
+    font-size: 35px;
+}
+
+@media only screen and (min-width: 600px){
+    /* Para tablests */
+    .contenedor{
+        color: black;
+    }
+    .imagen-html{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .imagen-css{
+        display: none;
+    }
+    .instagram, hr, footer{
+        display: block;
+    }
+    .fondo, .contenedor{
+        background-color: rgb(224, 92, 44);
+    }
+    .contenedor-articulos{
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .barra div{
+        background-color: brown;
+    }
+
+    .datos div h2, .datos div h4, .busqueda li a, h5{
+        color: black;
+    }
+
+    hr{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fondo2, .redes, .busqueda, .grupo h1{
+        text-align: center;
+        background-color: rgb(133, 48, 18);
+        color: aliceblue;
+    }
+
+    .articulo{
+        border: 3px solid rgb(133, 48, 18);
+    }
+    
+}
+
+@media only screen and (min-width: 768px){
+    /* Para escritorio */
+    /* even odd par o impar */
+    .imagen-html{
+        display: none;
+    }
+
+    article img{
+        display: none;
+    }
+    
+    .articulo:nth-child(even){
+        background: url(/img/Orangután.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .articulo:nth-child(odd){
+        background: url(/img/code.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contenedor-articulos{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor{
+        background: url(/img/paisaje.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .fondo, .redes, footer, .fondo2{
+        background-color: rgb(0, 119, 255);
+    }
+
+    .barra div, .grupo h1{
+        background-color: rgba(42, 41, 44, 0.705);
+    }
+
+    .busqueda{
+        width: 98%;
+        background-color: rgba(42, 41, 44, 0.705);
+    }
+    
+    .articulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+        border: none;
+        border-radius: 0;
+    }
+
+    .barra{
+        display:  grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
